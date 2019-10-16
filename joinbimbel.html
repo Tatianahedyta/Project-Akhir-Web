@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="shortcut icon" href="logo-unej-baku.png">
+	<title>Bimbel</title>
+	<link rel="stylesheet" type="text/css" href="css/Style.css">
+	<link rel="stylesheet" type="text/css" href="css/Beranda.css">
+	<link rel="stylesheet" type="text/css" href="css/responsive.css">	
+
+</head>
+<body>
+	<header class="bg-img">
+        <div class="header">
+            <div class="sub-header">
+                <div class="logo">
+                  <a href="#"> <b> i S m a r t </b></a>
+                </div>
+                <ul class="right-menu">
+                    <li><a href="Beranda-Admin.html">Beranda</a></li>
+                    <li><a href="#">Program</a>
+                        <ul>
+                            <li><a href="private.html">PRIVATE</a></li>
+                            <li><a href="group.html">GROUP</a></li>
+                            <li><a href="bimbel.html">BIMBEL</a></li>
+                            <li><a href="promo.html">PROMO</a></li>
+                        </ul>
+                    </li>
+                   <li><a href="About.html">About</a></li>
+                    <li><a class="button" href="Login.html">Logout</a></li>
+                   
+                </ul>
+            </div>
+        </div>
+         <div class="big-text"> <b>i S m a r t</b>
+            <h1>By Getting Knowledge</h1>
+        </div>
+    </header>
+		<div id="content2" style="height: 900px;">
+			<h1>Join Bimbel</h1>
+			<div id="garis"></div>
+			<nav>
+				<ul>
+					<li style="border: 2px solid #4388CC; ; margin-left: 175px; 
+					height: 50px;"><a href="editbimbel.html" style=" padding-top: 15px">Identitas Guru</a></li>
+					<li style="background-color: #4388CC; height: 50px;"><a href="joinbimbel.html" 
+						style="color:white;">Join Bimbel</a></li>
+					</ul>
+				</nav>
+				<div id="box2" style="height: 800px; width: 700px;">
+					<div id="KS">
+						<ol>
+							<li style="margin-bottom: 90px;">Apakah Anda yakin bergabung dengan Ganesha Operation?
+								<div id="garis7" style="position: relative; top: 1px; right: 50px; width: 80%; margin-top: 2px ;margin-bottom:10px;"></div>
+								<input type="radio" name="Y/N">Ya<br>
+								<input type="radio" name="Y/N">Tidak
+							</li>
+							<li style="margin-bottom: 80px;">Apa paket yang anda inginkan ?
+								<div id="garis7" style="position: relative; top: 1px; right: 50px; width: 80%; margin-top: 2px ;margin-bottom:10px;"></div>
+								<select name="Skala" size="1"> 
+									<option value="1"> Pilih skala</option>
+									<option value="1">Silver</option>
+									<option value="2">Gold</option>
+									<option value="3">Titanium</option>
+									
+								</select>
+							</li>
+							<li style="font-size: 18px; margin-left: 80px;">Jika berminat tulis form dibawah ini?
+								<div id="garis7" style="position: relative; top: 1px; right: 10px; width: 95%; margin-top: 2px ;margin-bottom:10px;"></div>
+								<a>Alamat :</a>
+								<textarea name="Saran" placeholder="Tulis alamat anda disini"></textarea>
+								<a style="margin-top: 20px ">No telepon</a>
+								<textarea name="Kritik" placeholder="No telepon yang bisa dihubungi"></textarea>
+								<button onclick="tr();">Join</button>
+							</li>
+						</div>
+					</div>
+				</div>
+				<div id="footer">
+					<h3>copyright &copy; 2018 All Right Reserved</h3>
+				</div>
+				<div id="BS"></div>
+				<div id="submit">				
+					<h1 style="color: black; font-size:20px;">Yeay, Submit Anda Berhasil!</h1>
+					<div id="garis3" style="width: 65%; position: relative; right: 85px;" ></div> 
+					<img src="icon.png">
+					<p style="color: black; padding: 10px; ">Terimakasih! Kritik dan saran anda telah kami terima. Semoga dengan kritik dan saran yang anda berikan, dapat membantu dalam memajukan lagi website ini.</p>
+					<button onclick="tr()">Kembali</button>
+				</div>
+			</div>
+		</div>
+		<script>
+			var alert = false;
+			function tr(){
+				if (alert) {
+					document.getElementById('submit').style.display="none";
+					document.getElementById('BS').style.display="none";
+					alert=false;
+				}
+				else {
+					document.getElementById('submit').style.display="block";
+					document.getElementById('BS').style.display="block";
+					alert=true;	
+				}
+			}
+		</script>
+		  <div id="footer">
+        &copy; Kelompok 11B<br><br>
+        Tatiana Hedyta (162410101014) & Usi Lusiana Dewi (162410101046)
+    </div>
+	</body>
+	</html>
