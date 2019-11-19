@@ -1,0 +1,23 @@
+.list-program
+{
+    border: 1px solid gainsboro;
+    padding: 10px;
+    float: left;
+    width: 850px;
+    margin: 5px;
+}
+ 
+.list-program:hover
+{
+    transition-duration: 700ms;
+    box-shadow: 5px 5px gainsboro;
+}
+ 
+.list-program img
+{
+    width: 25%;
+    height: 200px;
+    display: block;
+    margin-bottom: 5px;
+
+}

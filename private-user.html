@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Private Admin</title>
+  <title>Private User</title>
   <link rel="stylesheet" type="text/css" href="program.css">
+  <link rel="stylesheet" type="text/css" href="popup.js">
   <link rel="stylesheet" type="text/css" href="css/responsive.css">
 </head>
 <body>
@@ -13,16 +14,16 @@
                   <a href="#"> <b> i S m a r t </b></a>
                 </div>
                 <ul class="right-menu">
-                    <li><a href="Beranda.html">Beranda</a></li>
+                    <li><a href="Beranda-user.html">Beranda</a></li>
                     <li><a href="#">Program</a>
                         <ul>
-                            <li><a href="private.html">PRIVATE</a></li>
-                            <li><a href="group.html">GROUP</a></li>
-                            <li><a href="bimbel.html">BIMBEL</a></li>
-                            <li><a href="promo.html">PROMO</a></li>
+                            <li><a href="private-user.html">PRIVATE</a></li>
+                            <li><a href="group-user.html">GROUP</a></li>
+                            <li><a href="bimbel-user.html">BIMBEL</a></li>
+                            <li><a href="promo-user.html">PROMO</a></li>
                         </ul>
                     </li>
-                   <li><a href="about-admin.html">About</a></li>
+                   <li><a href="about-user.html">About</a></li>
                     <li><a class="button" href="Login.html">Logout</a></li>
                    
                 </ul>
@@ -31,70 +32,77 @@
          
     </header>
   <div class="jenis-program">      
-  
+   
         <div class="list-program">          
           <img src="guru1.jpg"> 
-            <h4>Indah Dwi Lestnari</h4>           
+            <h4>Indah Dwi Lestari</h4>           
             <h5>Rp 30.000/pertemuan</h5> 
             <a class="tombol tombol-detail" href="#">Detail</a> 
-            <a class="tombol tombol-beli" href="editguru.html">Edit</a>   
+            <div id="closed"></div>
+            <a href="#popup" class="tombol tombol-beli">JOIN</a>
+            <div class="popup-wrapper" id="popup">
+            <div class="popup-container">
+       <!--      Selamat Anda telah bergabung dengan Guru Private ini.
+            <a class='popup-close' href='#closed'>X</a> -->
+            </div>
+            </div>  
         </div> 
         <div class="list-program">          
           <img src="guru2.jpg"> 
             <h4>Anugraha Farin</h4>           
             <h5>Rp 28.000/pertemuan</h5> 
-            <a class="tombol tombol-detail" href="detail-private.html">Detail</a> 
-            <a class="tombol tombol-beli" href="editguru.html">Edit</a>   
+            <a class="tombol tombol-detail" href="detail-private-us.html">Detail</a> 
+            <a href="#popup" class="tombol tombol-beli">JOIN</a>   
         </div> 
         <div class="list-program">          
           <img src="guru3.jpg"> 
             <h4>Arizal Tantowi</h4>           
             <h5>Rp 35.000/pertemuan</h5> 
             <a class="tombol tombol-detail" href="#">Detail</a> 
-            <a class="tombol tombol-beli" href="editguru.html">Edit</a>   
+            <a href="#popup" class="tombol tombol-beli">JOIN</a>    
         </div> 
         <div class="list-program">          
           <img src="guru4.jpg"> 
             <h4>Yulia Lailatul</h4>           
             <h5>Rp 35.000/pertemuan</h5> 
             <a class="tombol tombol-detail" href="#">Detail</a> 
-            <a class="tombol tombol-beli" href="editguru.html">Edit</a>   
+            <a href="#popup" class="tombol tombol-beli">JOIN</a>    
         </div> 
         <div class="list-program">          
           <img src="guru5.jpg" > 
             <h4>Ravinda Lady </h4>           
             <h5>Rp 40.000/pertemuan</h5> 
             <a class="tombol tombol-detail" href="#">Detail</a> 
-            <a class="tombol tombol-beli" href="editguru.html">Edit</a>   
+           <a href="#popup" class="tombol tombol-beli">JOIN</a>     
         </div> 
         <div class="list-program">          
           <img src="guru6.jpg"> 
             <h4>Ayunda Nita</h4>           
             <h5>Rp 40.000/pertemuan</h5> 
             <a class="tombol tombol-detail" href="#">Detail</a> 
-            <a class="tombol tombol-beli" href="editguru.html">Edit</a>   
+            <a href="#popup" class="tombol tombol-beli">JOIN</a>    
         </div> 
         <div class="list-program">          
           <img src="guru7.jpg"> 
             <h4>Naufal Haryanto</h4>           
             <h5>Rp 38.000/pertemuan</h5> 
             <a class="tombol tombol-detail" href="#">Detail</a> 
-            <a class="tombol tombol-beli" href="editguru.html">Edit</a>   
+            <a href="#popup" class="tombol tombol-beli">JOIN</a>   
         </div> 
         <div class="list-program">          
           <img src="guru8.jpg"> 
             <h4>Anash Herdiansya</h4>           
             <h5>Rp 36.000/pertemuan</h5> 
             <a class="tombol tombol-detail" href="#">Detail</a> 
-            <a class="tombol tombol-beli" href="editguru.html">Edit</a>   
+            <a href="#popup" class="tombol tombol-beli">JOIN</a>    
+        </div>
         </div> 
-        <a href="admintambahprivate.html"><button id="tambahprivate">Tambah</button></a>
-  </div>
-
-   <div style="margin-top:200px "></div>
+     </div>
+    <div style="margin-top:200px "></div>
     <div id="footer">
         &copy; Kelompok 11 B <br><br>
         Tatiana Hedyta (162410101014) & Usi Lusiana Dewi (162410101046)
     </div>
 </body>
+
 </html>

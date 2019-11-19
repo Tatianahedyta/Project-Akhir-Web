@@ -2,8 +2,9 @@
 <html>
 <head>
   <title>Private</title>
-  <link rel="stylesheet" type="text/css" href="css/Style.css">
+  <link rel="stylesheet" type="text/css" href="css/admineditprogram.css">
   <link rel="stylesheet" type="text/css" href="css/Beranda.css">
+   <link rel="stylesheet" type="text/css" href="css/responsive.css">
 
 </head>
 <body>
@@ -14,7 +15,7 @@
                   <a href="#"> <b> i S m a r t </b></a>
                 </div>
                 <ul class="right-menu">
-                    <li><a href="Beranda-Admin.html">Beranda</a></li>
+                    <li><a href="Beranda.html">Beranda</a></li>
                     <li><a href="#">Program</a>
                         <ul>
                             <li><a href="private.html">PRIVATE</a></li>
@@ -34,54 +35,51 @@
         </div>
     </header>
 
-    <div id="content2" style="height: 675px">
-      <h1>Identitas</h1>
-      <div id="garis"></div>
-      <nav>
-        <ul>
-          <li style="border: 2px solid #4388CC; background-color: #4388CC; margin-left: 200px; height: 50px"><a href="editguru.html" style="color:white; padding-top: 15px">Identitas</a></li>
-          <li style="height: 50px"><a href="joinprivate.html">Join Private</a></li>
-        </ul>
-      </nav>
-      <div id="box2" style="margin: 10px; height: 600px; width: 670px;">
-        <div id="boxF2">
-          <ol>
-            <li>Identitas
-              <a>Perkenalkan nama saya Sri Indah yang berdomisili di Jember yang beralamt di Perum Gunung batu blok C 11. Pendidikan terakhir S1 Fakultas PGSD</a>
-            </li>
-            <br> <br>
-            
-            <li style="margin-top: 90px;">Pengalaman
-              <a>Pengalaman kerja saya selama ini pernah menjadi guru sdk maria fatima selama 4 tahun. Kemudian bekerja di sd sumbersari 1 selama 3 tahun. Sekarang saya mengajar di di SDN 01 Kepatihan</a>
-            </li>
-            <br>
-            <li style="margin-top: 120px;">Keahlian
-              <a>Saya pernah mendapat beasiswa kuliah di Universitas Jember. Saya juga mampu mengajar dengan baik.</a>
-            </li>
-             <li style="margin-top: 120px;">Harga
-              <a>Harga per pertemuan adalah 30.000</a>
-            </li>
-          </ol>
-        </div>
-        <div id="boxF3">
-          <img src="log.png">
-          <div id="boxS">
-            <h4 style="color: black; font-size: 16px; text-align: center;">Ada yang ditanyakan?</h4>
-            <input type="text" name="pertanyaan" placeholder="Tanya disini yaa" >
-            <input type="text" name="pertanyaan" placeholder="masukkan email anda disini" style="margin-top: 8px;">
-            <button>submit</button>
-            <p>Kami akan berusaha menjawab pertanyaan anda dalam beberapa menit</p>
-          </div>
-        </div>
-        
-        </div>
-      </div>
+    <div class="produk-box">
+    <br>
+      <form name="formproduk" action="private.html" onsubmit="return formvalidasi()">
+          <label>Nama Guru</label>
+          <input type="text" name="nama" placeholder="Nama Lengkap" />
+
+          <label>Alamat Guru</label>
+          <input type="text" name="alamat" placeholder="Alamat" />
+
+          <label>Harga Les Private</label>
+          <input type="text" name="harga" placeholder="Harga setiap pertemuan" />
+
+          <label>Foto Guru</label>
+          <input type="file" name="foto" />
+          <input type="submit" value="Simpan">
+      </form>
     </div>
-  </div>
-  <div id="footer">
-        &copy; Kelompok 11B<br><br>
-        Tatiana Hedyta (162410101014) & Usi Lusiana Dewi (162410101046)
-    </div>
-</div>
+  </body>
+      <script type = "text/javascript">
+      // Form validasi jika inputan kosong
+      function formvalidasi() {
+      
+         if( document.formproduk.nama.value == "" ) {
+            alert( "Nama Guru Tidak Boleh Kosong!" );
+            document.formproduk.nama.focus() ;
+            return false;
+         }
+         if( document.formproduk.alamat.value == "" ) {
+            alert( "Alamat Tidak Boleh Kosong!" );
+            document.formproduk.alamat.focus() ;
+            return false;
+         }
+         if( document.formproduk.harga.value == "" ) {
+            alert( "Harga Tidak Boleh Kosong!" );
+            document.formproduk.harga.focus() ;
+            return false;
+         }
+         if( document.formproduk.foto.value == "" ) {
+            alert( "Foto Belum diUpload!" );
+            document.formproduk.foto.focus() ;
+            return false;
+         }
+         return alert('Profil Guru Berhasil diUbah!');
+      }
+    </script>
+</html>
 </body>
 </html>

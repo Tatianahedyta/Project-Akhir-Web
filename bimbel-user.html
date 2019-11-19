@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Bimbel Admin</title>
+  <title>iSmart</title>
   <link rel="stylesheet" type="text/css" href="program.css">
-   <link rel="stylesheet" type="text/css" href="css/responsive.css">
+  <link rel="stylesheet" type="text/css" href="popup.js">
+  <link rel="stylesheet" type="text/css" href="css/responsive.css">
 </head>
 <body>
   <header>
@@ -13,16 +14,16 @@
                   <a href="#"> <b> i S m a r t </b></a>
                 </div>
                 <ul class="right-menu">
-                    <li><a href="Beranda.html">Beranda</a></li>
+                    <li><a href="Beranda-user.html">Beranda</a></li>
                     <li><a href="#">Program</a>
                         <ul>
-                            <li><a href="private.html">PRIVATE</a></li>
-                            <li><a href="group.html">GROUP</a></li>
-                            <li><a href="bimbel.html">BIMBEL</a></li>
-                            <li><a href="promo.html">PROMO</a></li>
+                            <li><a href="private-user.html">PRIVATE</a></li>
+                            <li><a href="group-user.html">GROUP</a></li>
+                            <li><a href="bimbel-user.html">BIMBEL</a></li>
+                            <li><a href="promo-user.html">PROMO</a></li>
                         </ul>
                     </li>
-                   <li><a href="about-admin.html">About</a></li>
+                   <li><a href="about-user.html">About</a></li>
                     <li><a class="button" href="Login.html">Logout</a></li>
                    
                 </ul>
@@ -31,64 +32,73 @@
          
     </header>
   <div class="jenis-program">      
- 
+     
         <div class="list-program">          
           <img src="bimbel1.jpg"> 
             <h4>Primagama</h4>           
             <h5>Jalan Panjaitan no 23</h5> 
-            <a class="tombol tombol-detail" href="detail-bimbel.html">Detail</a> 
-            <a class="tombol tombol-beli" href="editbimbel.html">Edit</a>   
+            <a class="tombol tombol-detail" href="detail-bimbel-us.html">Detail</a> 
+            <div id="closed"></div>
+            <a href="#popup" class="tombol tombol-beli">JOIN</a>
+            <div class="popup-wrapper" id="popup">
+            <div class="popup-container">
+            Selamat Anda telah bergabung di Bimbel ini
+            <a class='popup-close' href='#closed'>X</a>
+            </div>
+            </div>   
         </div> 
         <div class="list-program">          
           <img src="bimbel2.png"> 
             <h4>Brits Edu Center</h4>           
             <h5>Jalan Ahmad Yani no 171</h5> 
             <a class="tombol tombol-detail" href="#">Detail</a> 
-            <a class="tombol tombol-beli" href="editbimbel.html">Edit</a>   
-        </div> 
+            <a href="#popup" class="tombol tombol-beli">JOIN</a>
+
+        </div>  
         <div class="list-program">          
           <img src="bimbel3.png"> 
             <h4>School Guarantee</h4>           
             <h5>Jalan Gajah Mada no 78</h5> 
             <a class="tombol tombol-detail" href="#">Detail</a> 
-            <a class="tombol tombol-beli" href="editbimbel.html">Edit</a>   
+            <a href="#popup" class="tombol tombol-beli">JOIN</a>  
         </div> 
         <div class="list-program">          
           <img src="bimbel4.jpg"> 
             <h4>Ganesha Operation</h4>           
             <h5>Jalan Jawa no 9</h5> 
             <a class="tombol tombol-detail" href="#">Detail</a> 
-            <a class="tombol tombol-beli" href="editbimbel.html">Edit</a>   
-        </div> 
+            <a href="#popup" class="tombol tombol-beli">JOIN</a>
+  
+        </div>  
         <div class="list-program">          
           <img src="bimbel5.png" > 
             <h4>Genius Indonesia</h4>           
             <h5>Jalan Gatot Subroto no 43</h5> 
             <a class="tombol tombol-detail" href="#">Detail</a> 
-            <a class="tombol tombol-beli" href="editbimbel.html">Edit</a>   
-        </div> 
+            <a href="#popup" class="tombol tombol-beli">JOIN</a>
+        </div>  
         <div class="list-program">          
           <img src="bimbel6.jpg"> 
             <h4>KUMON</h4>           
-            <h5>Mutiara Plaza Jember  II</h5> 
+            <h5>Mutiara Plaza Jember II</h5> 
             <a class="tombol tombol-detail" href="#">Detail</a> 
-            <a class="tombol tombol-beli" href="editbimbel.html">Edit</a>   
-        </div> 
+            <a href="#popup" class="tombol tombol-beli">JOIN</a>   
+        </div>  
         <div class="list-program">          
           <img src="bimbel7.jpg"> 
             <h4>TRIDAYA</h4>           
             <h5>Jalan Hayam Wuruk no 98</h5> 
             <a class="tombol tombol-detail" href="#">Detail</a> 
-            <a class="tombol tombol-beli" href="editbimbel.html">Edit</a>   
-        </div> 
+            <a href="#popup" class="tombol tombol-beli">JOIN</a>   
+        </div>  
         <div class="list-program">          
           <img src="bimbel8.jpg"> 
             <h4>Laputa</h4>           
             <h5>Jalan PB Sudirman no 77</h5> 
             <a class="tombol tombol-detail" href="#">Detail</a> 
-            <a class="tombol tombol-beli" href="editbimbel.html">Edit</a>   
+            <a href="#popup" class="tombol tombol-beli">JOIN</a>  
         </div> 
-        <a href="admintambahbimbel.html"><button id="tambahbimbel">Tambah</button></a>
+    </div>
   </div>
 
     <div style="margin-top:200px "></div>

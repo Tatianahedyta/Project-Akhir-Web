@@ -5,6 +5,7 @@
   <link rel="stylesheet" type="text/css" href="css/admineditprogram.css">
   <link rel="stylesheet" type="text/css" href="css/Beranda.css">
    <link rel="stylesheet" type="text/css" href="css/responsive.css">
+   <link rel="stylesheet" type="text/css" href="program.css">
 
 </head>
 <body>
@@ -30,22 +31,26 @@
                 </ul>
             </div>
         </div>
-         <div class="big-text"> <b>i S m a r t</b>
-            <h1>By Getting Knowledge</h1>
-        </div>
+        
     </header>
 
     <div class="produk-box">
     <br>
-      <form name="formproduk" action="bimbel.html" onsubmit="return formvalidasi()">
-          <label>Nama Bimbel</label>
+      <form name="formproduk" action="private.html" onsubmit="return formvalidasi()">
+          <label>Nama</label>
           <input type="text" name="nama" placeholder="Nama Bimbel" />
 
-          <label>Alamat Bimbel</label>
-          <input type="text" name="alamat" placeholder="Alamat" />
+          <label>Harga Pertahun</label>
+          <input type="text" name="harga" placeholder="Harga" />
 
-          <label>Harga Bimbel</label>
-          <input type="text" name="harga" placeholder="Harga setiap tahun" />
+          <label>Prestasi</label>
+          <input type="text" name="pengalaman" placeholder="Prestasi" />
+
+          <label>Tersedia</label>
+          <input type="text" name="tersedia" placeholder="Paket yang disediakan" />
+
+          <label>Alamat</label>
+          <input type="text" name="alamat" placeholder="Alamat Guru" />
 
           <label>Foto Bimbel</label>
           <input type="file" name="foto" />
@@ -58,17 +63,27 @@
       function formvalidasi() {
       
          if( document.formproduk.nama.value == "" ) {
-            alert( "Nama Tidak Boleh Kosong!" );
+            alert( "Nama Guru Tidak Boleh Kosong!" );
             document.formproduk.nama.focus() ;
-            return false;
-         }
-         if( document.formproduk.alamat.value == "" ) {
-            alert( "Alamat Tidak Boleh Kosong!" );
-            document.formproduk.alamat.focus() ;
             return false;
          }
          if( document.formproduk.harga.value == "" ) {
             alert( "Harga Tidak Boleh Kosong!" );
+            document.formproduk.alamat.focus() ;
+            return false;
+         }
+         if( document.formproduk.prestasi.value == "" ) {
+            alert( "Prestasi Tidak Boleh Kosong!" );
+            document.formproduk.harga.focus() ;
+            return false;
+         }
+         if( document.formproduk.tersedia.value == "" ) {
+            alert( "Tersedia Tidak Boleh Kosong!" );
+            document.formproduk.harga.focus() ;
+            return false;
+         }
+         if( document.formproduk.alamat.value == "" ) {
+            alert( "Alamat Tidak Boleh Kosong!" );
             document.formproduk.harga.focus() ;
             return false;
          }
@@ -77,7 +92,7 @@
             document.formproduk.foto.focus() ;
             return false;
          }
-         return alert('Profil Bimbel Berhasil diUbah!');
+         return alert('Data Berhasil ditambahkan!');
       }
     </script>
 </html>
