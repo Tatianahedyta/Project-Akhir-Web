@@ -30,9 +30,7 @@
                     </li>
                   
                     <li><a href="about-user.html">About</a></li>
-                    <li><a class="button" href="Beranda.html">Logout</a></li>
-                   
-                    
+                    <li><a class="button" id="btn-logout" href="#">Logout</a></li>
                         </li>
                 </ul>
             </div>
@@ -41,6 +39,18 @@
             <h1>By Getting Knowledge</h1>
         </div>
     </header>
+        <div id="myModal" class="modal modal-zoom">
+        <div class="modal-content">
+            <p>Apakah anda yakin akan keluar?</p>
+            <button id="modal-btn-yes">
+                Ya
+            </button>
+            <button id="modal-btn-no">
+                Tidak
+            </button>
+        </div>
+
+    </div>
     <div class="text">
         <h2>Welcome To iSmart</h2>
         <p>iSmart adalah e-commerce yang bergerak di bidang pendidikan non formal. iSmart menyediakan info layanan pendidikan yang sudah bekerja sama dengan kami khususnya di Kabupaten Jember seperti bimbel Ganesha Operation, Primagama, Delta dan lain-lain. Selain itu iSmart juga menawarkan guru-guru untuk murid yang ingin les private maupun kelompok. Syarat pendaftaran calon murid iSmart adalah pelajar yang sedang menempuh pendidikan SD, SMP, hingga SMA. iSmart berkomitmen untuk menjadi e-commerce yang berkualitas dengan membantu calon murid dalam memilih guru atau bimbel favoritnya. </p>
@@ -73,6 +83,98 @@
         &copy; Kelompok 11 B <br><br>
         Tatiana Hedyta (162410101014) & Usi Lusiana Dewi (162410101046)
     </div>
+
+
 </body>
+<script  src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+
+    $("#btn-logout").on('click', function () {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "block";
+    })
+
+    $("#modal-btn-no").on('click', function () {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    })
+
+    $("#modal-btn-yes").on('click', function () {
+        window.location.href = 'Beranda-umum.html';
+        return false;
+        modal.style.display = "none";
+    })
+
+    $(document).keyup(function (e) {
+        if (e.keyCode === 13) {
+            if (modal.style.display == "block") {
+                window.location.href = 'Beranda-umum.html';
+                return false;
+                modal.style.display = "none";
+            }
+        }     // enter
+        if (e.keyCode === 27) {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+        ;   // esc
+    });
+</script>
 
 </html>
+
+<style>
+    .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-zoom{
+    animation:animatezoom 0.6s}@keyframes animatezoom{from{transform:scale(0)} to{transform:scale(1)}
+}
+
+.modal-content{
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+#modal-btn-yes{
+    padding: 15px;
+    background-color: #42A5F5;
+    border-radius: 10px;
+    color: white;
+}
+
+#modal-btn-no{
+    padding: 15px;
+    background-color: #dc3545;
+    border-radius: 10px;
+    color: white;
+}
+
+.close{
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+</style>
