@@ -1,0 +1,22 @@
+[
+{
+	"nama": "Indah Dwi Lestari",
+	"harga": "30.000",
+	"foto":"guru1.jpg"
+},
+{
+	"nama":"Anugraha Farin",
+	"harga": "28.000",
+	"foto":"guru2.jpg"
+},
+{
+	"nama": "Arizal Tantowi",
+	"harga": "35.000",
+	"foto":"guru3.jpg"
+},
+{
+	"nama":"Yulia Lailatul",
+	"harga": "35.000",
+	"foto":"guru4.jpg"
+}
+]
