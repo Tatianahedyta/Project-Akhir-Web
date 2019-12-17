@@ -1,0 +1,22 @@
+[
+{
+	"nama": "Matematika",
+	"alamat": "Jalan Panjaitan no 23",
+	"foto":"matematika.jpg"
+},
+{
+	"nama":"Bahasa Inggris",
+	"alamat": "Jalan Ahmad Yani no 171",
+	"foto":"grup1.jpg"
+},
+{
+	"nama": "Bahasa Mandarin",
+	"alamat": "Jalan Gajah Mada no 78",
+	"foto":"grup2.jpg"
+},
+{
+	"nama":"Teknologi Informasi dan Komunikasi",
+	"alamat": "Mutiara Plaza Jember II",
+	"foto":"grup5.jpg"
+}
+]
