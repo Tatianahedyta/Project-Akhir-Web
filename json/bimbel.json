@@ -1,0 +1,22 @@
+[
+{
+	"nama": "Primagama",
+	"alamat": "Jalan Panjaitan no 25",
+	"foto":"bimbel1.jpg"
+},
+{
+	"nama":"Brits Edu Center",
+	"alamat": "Jalan Ahmad Yani no 171",
+	"foto":"bimbel2.png"
+},
+{
+	"nama": "School Guarantee",
+	"alamat": "Jalan Gajah Mada no 78",
+	"foto":"bimbel3.png"
+},
+{
+	"nama":"Ganesha Operation",
+	"alamat": "Jalan Jawa no 9",
+	"foto":"bimbel4.jpg"
+}
+]
