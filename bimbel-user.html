@@ -24,80 +24,25 @@
                         </ul>
                     </li>
                    <li><a href="about-user.html">About</a></li>
-                    <li><a class="button" href="Login.html">Logout</a></li>
+                    <li><a class="button" id="btn-logout" href="#">Logout</a></li>
                    
                 </ul>
             </div>
         </div>
          
     </header>
-  <div class="jenis-program">      
-     
-        <div class="list-program">          
-          <img src="bimbel1.jpg"> 
-            <h4>Primagama</h4>           
-            <h5>Jalan Panjaitan no 23</h5> 
-            <a class="tombol tombol-detail" href="detail-bimbel-us.html">Detail</a> 
-            <div id="closed"></div>
-            <a href="#popup" class="tombol tombol-beli">JOIN</a>
-            <div class="popup-wrapper" id="popup">
-            <div class="popup-container">
-            Selamat Anda telah bergabung di Bimbel ini
-            <a class='popup-close' href='#closed'>X</a>
-            </div>
-            </div>   
-        </div> 
-        <div class="list-program">          
-          <img src="bimbel2.png"> 
-            <h4>Brits Edu Center</h4>           
-            <h5>Jalan Ahmad Yani no 171</h5> 
-            <a class="tombol tombol-detail" href="#">Detail</a> 
-            <a href="#popup" class="tombol tombol-beli">JOIN</a>
-
-        </div>  
-        <div class="list-program">          
-          <img src="bimbel3.png"> 
-            <h4>School Guarantee</h4>           
-            <h5>Jalan Gajah Mada no 78</h5> 
-            <a class="tombol tombol-detail" href="#">Detail</a> 
-            <a href="#popup" class="tombol tombol-beli">JOIN</a>  
-        </div> 
-        <div class="list-program">          
-          <img src="bimbel4.jpg"> 
-            <h4>Ganesha Operation</h4>           
-            <h5>Jalan Jawa no 9</h5> 
-            <a class="tombol tombol-detail" href="#">Detail</a> 
-            <a href="#popup" class="tombol tombol-beli">JOIN</a>
-  
-        </div>  
-        <div class="list-program">          
-          <img src="bimbel5.png" > 
-            <h4>Genius Indonesia</h4>           
-            <h5>Jalan Gatot Subroto no 43</h5> 
-            <a class="tombol tombol-detail" href="#">Detail</a> 
-            <a href="#popup" class="tombol tombol-beli">JOIN</a>
-        </div>  
-        <div class="list-program">          
-          <img src="bimbel6.jpg"> 
-            <h4>KUMON</h4>           
-            <h5>Mutiara Plaza Jember II</h5> 
-            <a class="tombol tombol-detail" href="#">Detail</a> 
-            <a href="#popup" class="tombol tombol-beli">JOIN</a>   
-        </div>  
-        <div class="list-program">          
-          <img src="bimbel7.jpg"> 
-            <h4>TRIDAYA</h4>           
-            <h5>Jalan Hayam Wuruk no 98</h5> 
-            <a class="tombol tombol-detail" href="#">Detail</a> 
-            <a href="#popup" class="tombol tombol-beli">JOIN</a>   
-        </div>  
-        <div class="list-program">          
-          <img src="bimbel8.jpg"> 
-            <h4>Laputa</h4>           
-            <h5>Jalan PB Sudirman no 77</h5> 
-            <a class="tombol tombol-detail" href="#">Detail</a> 
-            <a href="#popup" class="tombol tombol-beli">JOIN</a>  
-        </div> 
+    <div id="myModal" class="modal modal-zoom">
+        <div class="modal-content">
+            <p>Apakah anda yakin akan keluar?</p>
+            <button id="modal-btn-yes">
+                Ya
+            </button>
+            <button id="modal-btn-no">
+                Tidak
+            </button>
+        </div>
+        </div>
+  <div class="jenis-program" id="isi">      
     </div>
   </div>
 
@@ -107,5 +52,61 @@
         Tatiana Hedyta (162410101014) & Usi Lusiana Dewi (162410101046)
     </div>
 </body>
+<script  src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $.getJSON('https://raw.githubusercontent.com/Tatianahedyta/Tatiana.github.io/master/json/bimbel.json',
+            function (bimbel) {
+                $.each(bimbel, function (n, response) {
+                    $('#isi').append(
+                      `<div class="list-program">
+                      <img src="`+response['foto']+`"> 
+            <h4>`+response['nama']+`</h4>           
+            <h5>`+response['alamat']+`</h5> 
+            <a class="tombol tombol-detail" href="detail-bimbel-us.html">Detail</a> 
+            <div id="closed"></div>
+            <a href="#popup" class="tombol tombol-beli">JOIN</a>
+            <div class="popup-wrapper" id="popup">
+            <div class="popup-container">
+        Selamat Anda telah bergabung dengan Bimbel ini.
+            <a class='popup-close' href='#closed'>X</a>
+            </div>
+            </div> `
+                    );
+                })
+            });
+    })
 
+
+    $("#btn-logout").on('click', function () {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "block";
+    })
+
+    $("#modal-btn-no").on('click', function () {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    })
+
+    $("#modal-btn-yes").on('click', function () {
+        window.location.href = 'Login.html';
+        return false;
+        modal.style.display = "none";
+    })
+
+    $(document).keyup(function (e) {
+        if (e.keyCode === 13) {
+            if (modal.style.display == "block") {
+                window.location.href = 'Login.html';
+                return false;
+                modal.style.display = "none";
+            }
+        }     // enter
+        if (e.keyCode === 27) {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+        ;   // esc
+    });
+</script>
 </html>
