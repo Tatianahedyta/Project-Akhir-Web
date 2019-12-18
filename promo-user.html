@@ -25,13 +25,25 @@
                         </ul>
                     </li>
                    <li><a href="about-user.html">About</a></li>
-                    <li><a class="button" href="Login.html">Logout</a></li>
+                    <li><a class="button" id="btn-logout" href="#">Logout</a></li>
                    
                 </ul>
             </div>
         </div>
          
     </header>
+     <div id="myModal" class="modal modal-zoom">
+        <div class="modal-content">
+            <p>Apakah anda yakin akan keluar?</p>
+            <button id="modal-btn-yes">
+                Ya
+            </button>
+            <button id="modal-btn-no">
+                Tidak
+            </button>
+        </div>
+
+    </div>
   <div class="jenis-program">      
   
         <div class="list-program">          
@@ -43,8 +55,8 @@
             <a href="#popup" class="tombol tombol-beli">JOIN</a>
             <div class="popup-wrapper" id="popup">
             <div class="popup-container">
-            Selamat Anda telah mendapatkan promo ini
-            <a class='popup-close' href='#closed'>X</a>
+            <!-- Selamat Anda telah mendapatkan promo ini -->
+         <!--    <a class='popup-close' href='#closed'>X</a> -->
             </div>
             </div>   
         </div> 
@@ -99,5 +111,40 @@
         Tatiana Hedyta (162410101014) & Usi Lusiana Dewi (162410101046)
     </div>
 </body>
+<script  src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script>
+
+    $("#btn-logout").on('click', function () {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "block";
+    })
+
+    $("#modal-btn-no").on('click', function () {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    })
+
+    $("#modal-btn-yes").on('click', function () {
+        window.location.href = 'Login.html';
+        return false;
+        modal.style.display = "none";
+    })
+
+    $(document).keyup(function (e) {
+        if (e.keyCode === 13) {
+            if (modal.style.display == "block") {
+                window.location.href = 'Login.html';
+                return false;
+                modal.style.display = "none";
+            }
+        }     // enter
+        if (e.keyCode === 27) {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+        ;   // esc
+    });
+</script>
+
 
 </html>
